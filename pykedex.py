@@ -5,15 +5,23 @@ import shutil
 import random
 import sys
 
-
+# Importing the required modules
 
 print("Hello! Welcome to Prof. Oak's Pykedex! ")
+
+# Taking the user input on what action they want to perform, and then converting it to lower case for uniformity
+
 user_input = input("Enter a Pokemon'name or its Dex No. to find out more about it.\nEnter random to see a random Pokemon's Pokedex entry\n" +"Enter exit to exit the program \n>>> ")
 user_input = user_input.lower()
 
+# Checking what the user input is
+
 if user_input == "random":
+    # The random.randint command gets a random number from the provided range. The str() command converts it to a string
 
     pokemon_name = str(random.randint(1,717))
+
+    # Getting the response from the API for the specified Pokemon
 
     r = requests.get("http://pokeapi.co/api/v1/pokemon/" + pokemon_name + "/")
 
@@ -29,6 +37,14 @@ else:
 
 
 def poke(p):
+    '''
+    The function takes the parameter  p, which is the JSON file provided by the API.
+    It initiates a tkinter window for a GUI.
+    Then, it gets the various object properties from the JSON file.
+    After that, it prints the properties and the sprite on to the tkinter Window
+
+    '''
+
     tk = Tk()
     canvas = Canvas(tk, width=550, height=450, bd=0, highlightthickness=0)
     canvas.pack()
@@ -55,7 +71,7 @@ def poke(p):
     canvas.create_image(380, 150, image=photoimage)
 
 
-    canvas.create_text(240,60,text=pokename,font=("Roboto",15))
+    canvas.create_text(270,60,text=pokename,font=("Roboto",15))
     canvas.create_text(100,130,text="Pokedex No.  :    " + str(id),font=("Roboto",13))
     canvas.create_text(90,170,text="Description  :    ",font=("Roboto",13))
     canvas.create_text(250,210,text=description,font=("Roboto",7))
@@ -79,6 +95,9 @@ def poke(p):
         canvas.create_text(380,320,text=types[1],font=("Roboto",11))
     tk.mainloop()
     input("Press Enter to exit")
+
+# Checking if the url is a valid one, and executing the function if it is. Else, the program returns an error message.
+
 if r.status_code == 200:
     r = r.json()
     poke(r)
