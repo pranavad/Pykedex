@@ -8,8 +8,9 @@ A simple Pokedex built in Python using the PokeApi
 3. Voila! You have your Pokedex.
 
 # Requirements
-1. Python 3.4.4
-2. Python PIL Library
+1. Python 3.4.4 (<a href="http://www.python.org/"> Find it here </a>)
+2. Python Pillow Library
+
 
 The Pykedex has been made using the <a href="pokeapi.co">PokeAPI </a> V1. 
 
