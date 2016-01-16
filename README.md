@@ -10,17 +10,21 @@ A simple Pokedex built in Python using the PokeApi
 # Requirements
 1. Python 3.4.4 (<a href="http://www.python.org/"> Find it here </a>)
 2. Python Pillow Library
+3. Python requests library
 
 
-
-###Installing the Pillow library - 
+###Installing the Pillow and requests libraries - 
 
 1. Install Python.
 2. Go to Command Line.
-3. Run the following command
+3. Run the following commande
 <br>
 ```
 $ py -m pip install pillow
+```
+and
+```
+$ py -m pip install requests
 ```
 
 The Pykedex has been made using the <a href="pokeapi.co">PokeAPI </a> V1. 
