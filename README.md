@@ -12,6 +12,17 @@ A simple Pokedex built in Python using the PokeApi
 2. Python Pillow Library
 
 
+
+###Installing the Pillow library - 
+
+1. Install Python.
+2. Go to Command Line.
+3. Run the following command
+<br>
+```
+$ py -m pip install pillow
+```
+
 The Pykedex has been made using the <a href="pokeapi.co">PokeAPI </a> V1. 
 
 You can check their Github repository <a href="https://github.com/phalt/pokeapi/tree/master/pokemon_v2">here.<a>
